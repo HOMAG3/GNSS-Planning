@@ -26,7 +26,7 @@ function dataParse_21c(allLines) {
 
     for (let i = 0; i < lines.length; i++) {
         line = lines[i];
-        lineArray = line.trim().split("\r\n");
+        lineArray = line.trim().split("\n");
 
         if (lineArray.length === 13) {
             let almanac = new Almanac();
@@ -64,7 +64,7 @@ function dataParse_21c(allLines) {
 function dataParse_alm(alllines) {
     almanaces = [];
     satellites = [];
-    let lines = alllines.trim().split("\r\n");
+    let lines = alllines.trim().split("\n");
     for (let i = 0; i < lines.length; i += 14) {
         //将每一组每行数据分割成字符串输组
         let line1 = sliceStringByLength(lines[i], 10);
