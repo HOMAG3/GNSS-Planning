@@ -70,7 +70,7 @@ function fileRead() {
         let almType = document.getElementById("almSelector").value;
         let text = load("Almanacs/" + almType);
 
-        if (almType === "conv1780.21alc") {
+        if (almType === "conv1780.21alc" || almType === "tarc1130.26alc" ) {
             dataParse_21c(text);
         } else if (almType === "almanac.alm") {
             dataParse_alm(text);
